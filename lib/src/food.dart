@@ -1,13 +1,7 @@
-import 'dart:ffi';
-
-import 'package:flutter/material.dart';
-
 class Food {
   String name;
-  double calories;
-  double protein;
-  double carbs;
-  double fats;
+  double calories, protein, carbs, fats;
+
   Food(
       {this.name = "",
       this.calories = 0,
