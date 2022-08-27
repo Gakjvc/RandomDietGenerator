@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'food.dart';
+import 'homepage.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -9,14 +9,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      home: homewidget(),
+      home: homePage(),
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
     );
-  }
-
-  Widget homewidget() {
-    return ListView();
   }
 }
