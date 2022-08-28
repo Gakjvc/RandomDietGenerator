@@ -17,12 +17,9 @@ void _calcIntake() {
   Food food1 = Food(name: "Frango", kcal: 125, protein: 20, fats: 5);
   Food food2 =
       Food(name: "Ovo", kcal: 146, carbs: 0.6, protein: 13.3, fats: 9.5);
-  food1.portion = Random().nextDouble();
-  food2.portion = Random().nextDouble();
-  while (food1.kcal * food1.portion + food2.kcal * food2.portion != kcal) {
-    food1.portion = Random().nextInt(20) * Random().nextDouble();
-    food2.portion = Random().nextInt(20) * Random().nextDouble();
-  }
+  double a = Random().nextDouble();
+  double b = 1 - a;
+  food1.portion = (kcal*a)/food1.kcal;
   print(food1.portion);
   print(food2.portion);
 }
