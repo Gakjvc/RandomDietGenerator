@@ -1,3 +1,3 @@
 # RDG - Random Diet Generator
 
-Inicially, a joke concept about an app that generates random diets obeying the person's calories and macronutrient needs
+Inicially, a joke app that generates random diets based on recommended calories and macronutrients
