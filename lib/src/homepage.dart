@@ -18,17 +18,6 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(body: meal(foods), floatingActionButton: NewDiet());
   }
 
-  void _calcIntake(List<Food> foods) {
-    double kcal = 2000, dailyProtein, dailyCarbs, dailyFats;
-    double a = Random().nextDouble();
-    // porcao1 +porcao2 + porcao3 = porcaofinal
-    // a + b + c = 1
-    double b = 1 - a;
-    foods[1].portion =
-        double.parse(((kcal * a) / foods[1].kcal).toStringAsFixed(1));
-    foods[2].portion =
-        double.parse(((kcal * b) / foods[2].kcal).toStringAsFixed(1));
-  }
 
   Widget NewDiet() {
     return IconButton(
@@ -52,3 +41,17 @@ class _HomePageState extends State<HomePage> {
     );
   }
 }
+  void _calcIntake(List<Food> foods) {
+    double kcal = 2000, dailyProtein, dailyCarbs, dailyFats;
+    // porcao1 +porcao2 + porcao3 = porcaofinal
+    // a + b + c = 1
+    // a = 1 / Random().nextInt(32)
+    // b = a / Random.nextInt(32)
+    // c = a % b
+    double a = Random().nextDouble();
+    double b = 1 - a;
+    foods[1].portion =
+        double.parse(((kcal * a) / foods[1].kcal).toStringAsFixed(1));
+    foods[2].portion =
+        double.parse(((kcal * b) / foods[2].kcal).toStringAsFixed(1));
+  }
